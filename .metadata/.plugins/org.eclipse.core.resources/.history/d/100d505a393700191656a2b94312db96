@@ -1,0 +1,15 @@
+package com.hw.stock.model;
+
+import java.util.Date;
+
+public class Compony {
+	
+	
+	String name;
+	float CurrentRate;
+	Date highDate;
+	float highRate;
+	Date lowDate;
+	float lowRate;
+	
+}

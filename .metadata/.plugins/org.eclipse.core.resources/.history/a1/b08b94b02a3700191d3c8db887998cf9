@@ -1,0 +1,13 @@
+package com.hw.stock.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.hw.stock.dao.StockDao;
+import com.hw.stock.service.StockService;
+
+public class StockServiceImpl implements StockService {
+	
+	@Autowired
+	StockDao dao;
+
+}

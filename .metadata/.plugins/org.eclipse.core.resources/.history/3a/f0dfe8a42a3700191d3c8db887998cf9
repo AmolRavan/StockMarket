@@ -1,0 +1,10 @@
+package com.hw.stock.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public interface StockService {
+	
+	
+
+}

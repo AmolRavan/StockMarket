@@ -1,0 +1,4 @@
+INDEX VERSION 1.4+C:\Users\hackthinwrkspce\stcok\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3583483721.index
+407329658.index
+1187618601.index

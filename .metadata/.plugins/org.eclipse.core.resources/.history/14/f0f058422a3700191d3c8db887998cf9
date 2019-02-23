@@ -1,0 +1,5 @@
+package com.hw.stock.service.impl;
+
+public class StockServiceImpl {
+
+}

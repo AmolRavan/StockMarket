@@ -1,0 +1,7 @@
+package com.hw.stock.model;
+
+public class ComponyHistoryYear {
+
+	int[] year = new int[10]; 
+
+}

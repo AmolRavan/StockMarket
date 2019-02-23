@@ -1,0 +1,25 @@
+package com.hw.stock.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.hw.stock.service.StockService;
+
+@Controller
+public class StockController {
+
+	@Autowired
+	StockService service;
+	
+	public List<String> searchCompony(String comName) {
+		
+		List<String> cList = new ArrayList<>();
+		
+		return 
+		
+	}
+	
+	
+}

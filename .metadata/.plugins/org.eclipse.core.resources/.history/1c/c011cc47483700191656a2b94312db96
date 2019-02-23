@@ -1,0 +1,61 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+
+<style type="text/css">	
+.myTd {
+width: 40px;
+}
+</style>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<c:set var="compony" value="${compony}" />
+	<%-- <c:if test="${compony not empty}"> --%>
+	<c:forEach items="${compony}" var="com" varStatus="status">
+		<table style="">
+			<tr>
+				<th class="myTd">Compony Name</th>
+				<td>${com.name}</td>
+			</tr>
+
+			<tr>
+				<th class="myTd">Current rate</th>
+				<td>${com.currentRate}</td>
+			</tr>
+			<tr>
+				<th class="myTd"">High Date</th>
+				<td>${com.highDate}</td>
+			</tr>
+			<tr>
+				<th class="myTd">High Rate</th>
+				<td>${com.highRate}</td>
+			</tr>
+			<tr>
+				<th class="myTd">Low Date</th>
+				<td>${com.lowDate}</td>
+			</tr>
+			<tr>
+				<th class="myTd">Low Rate</th>
+				<td>${com.lowRate}</td>
+			</tr>
+
+
+
+
+
+
+		</table>
+	</c:forEach>
+	<%-- 	</c:if> --%>
+</body>
+</html>

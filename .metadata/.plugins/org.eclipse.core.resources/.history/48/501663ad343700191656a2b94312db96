@@ -1,0 +1,46 @@
+<html>
+<TITLE> Stock Market</TITLE>
+ 
+<style type="text/css">
+body {
+    background-image:
+        url('https://cdn.crunchify.com/wp-content/uploads/2013/03/Crunchify.bg_.300.png');
+}
+</style>
+
+
+<script type="text/javascript"
+    src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    
+<script type="text/javascript">
+    function getComponies()() {
+        $.ajax({
+            url : 'searchCompony',
+            success : function(data) {
+            alert(data);
+                $('#result').html(data);
+            }
+        });
+    }
+</script>
+ 
+
+</head>
+ 
+<body>
+
+
+ <div align="center">
+    
+<h1>Stock Market</h1>
+    
+    <input type="text" id="comonyName" onchange="getComponies()" placeHolder="Search Compony Here"/>
+        <br> <br>  <br> <br>
+        <div id="result"></div>
+        <br>
+        <p>
+            
+        </p>
+    </div>
+</body>
+</html>

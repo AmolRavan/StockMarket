@@ -1,0 +1,16 @@
+package com.hw.stock.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.hw.stock.model.Compony;
+
+//@Service
+public interface StockService {
+
+	public List<String> searchCompony(String comName);
+	public Compony getComponyStock(String comName)
+	public List<Compony> getProfitStockInfo();
+	public List<Compony> getLossStockInfo();
+}

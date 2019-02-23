@@ -1,0 +1,10 @@
+package com.hw.stock.dao;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface StockDao {
+
+	void searchCompony(String comName);
+
+}

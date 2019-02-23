@@ -1,0 +1,40 @@
+package com.hw.stock.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.hw.stock.service.impl.StockServiceImpl;
+
+@Controller
+public class StockController {
+
+	@Autowired
+	StockServiceImpl service;
+
+	@RequestMapping("/searchCompony")
+	public ModelAndView searchCompony(String comName) {
+
+		
+		ModelAndView mav = new ModelAndView();
+		System.out.println("Inside  searchCompony ");
+		mav.setViewName("ComponyList");
+		
+		System.out.println("comName"+comName);
+
+		List<String> cList = service.searchCompony(comName);
+		
+		System.out.println(cList);
+
+		return cList;
+	}
+	
+	
+
+
+}

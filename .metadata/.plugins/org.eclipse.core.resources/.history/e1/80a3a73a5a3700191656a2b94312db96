@@ -1,0 +1,20 @@
+package com.hw.stock.model;
+
+public class ComponyHistoryYear {
+
+	float yday;
+
+	public ComponyHistoryYear(float yday) {
+		super();
+		this.yday = yday;
+	}
+
+	public float getYday() {
+		return yday;
+	}
+
+	public void setYday(float yday) {
+		this.yday = yday;
+	}
+
+}

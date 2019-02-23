@@ -1,0 +1,57 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+
+<style type="text/css">	
+.myTd {
+width: 400px;
+}
+</style>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<c:set var="compony" value="${compony}" />
+	<%-- <c:if test="${compony not empty}"> --%>
+	<table style="color: green">
+	<c:forEach items="${pList}" var="com" varStatus="status">
+		
+			<tr>
+				<th class="myTd">Compony Name</th>
+				<td class="myTd">${com.name}</td>
+			</tr>
+
+			<tr>
+				<th class="myTd">Current rate</th>
+				<td class="myTd">${com.currentRate}</td>
+			</tr>
+		
+	</c:forEach>
+	</table>
+	
+	<table style="color: green">
+	<c:forEach items="${lList}" var="com" varStatus="status">
+		
+			<tr>
+				<th class="myTd">Compony Name</th>
+				<td class="myTd">${com.name}</td>
+			</tr>
+
+			<tr>
+				<th class="myTd">Current rate</th>
+				<td class="myTd">${com.currentRate}</td>
+			</tr>
+		
+	</c:forEach>
+	</table>
+	<%-- 	</c:if> --%>
+</body>
+</html>

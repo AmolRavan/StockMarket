@@ -1,0 +1,12 @@
+<html>
+<body>
+<h2>Stock Market</h2>
+
+
+
+
+<input type="text" id="comonyName" onchange="getComponies()" placeHolder="Search Compony Here"/>
+
+
+</body>
+</html>

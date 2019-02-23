@@ -1,0 +1,58 @@
+package com.hw.stock.model;
+
+import java.util.Date;
+
+public class Compony {
+
+	public String name;
+	public float currentRate;
+	public Date highDate;
+	public float highRate;
+	public Date lowDate;
+	public float lowRate;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public float getCurrentRate() {
+		return currentRate;
+	}
+	
+	public void setCurrentRate(float currentRate) {
+		this.currentRate = currentRate;
+	}
+	public Date getHighDate() {
+		return highDate;
+	}
+	public void setHighDate(Date highDate) {
+		this.highDate = highDate;
+	}
+	public float getHighRate() {
+		return highRate;
+	}
+	public void setHighRate(float highRate) {
+		this.highRate = highRate;
+	}
+	public Date getLowDate() {
+		return lowDate;
+	}
+	public void setLowDate(Date lowDate) {
+		this.lowDate = lowDate;
+	}
+	public float getLowRate() {
+		return lowRate;
+	}
+	public void setLowRate(float lowRate) {
+		this.lowRate = lowRate;
+	}
+	@Override
+	public String toString() {
+		return "Compony [name=" + name + ", CurrentRate=" + currentRate + ", highDate=" + highDate + ", highRate="
+				+ highRate + ", lowDate=" + lowDate + ", lowRate=" + lowRate + "]";
+	}
+	
+	
+
+}

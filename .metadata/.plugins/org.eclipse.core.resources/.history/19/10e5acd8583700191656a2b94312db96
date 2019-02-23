@@ -1,0 +1,63 @@
+package com.hw.stock.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.hw.stock.model.Compony;
+import com.hw.stock.service.impl.StockServiceImpl;
+
+@Controller
+public class StockController {
+
+	@Autowired
+	StockServiceImpl service;
+
+	@RequestMapping("/getStockInfo")
+	public ModelAndView getStockInfo() {
+
+		ModelAndView mav = new ModelAndView("MainPage");
+		System.out.println("Inside  getStockInfo  => ");
+		List<Compony> pList = service.getProfitStockInfo();
+		List<Compony> lList = service.getLossStockInfo();
+		System.out.println(pList);
+		mav.addObject("pList", pList);
+		mav.addObject("lList", lList);
+		return mav;
+	}
+
+	@GetMapping("/searchCompony")
+	public ModelAndView searchCompony(String data ) {
+		ModelAndView mav = new ModelAndView("ComponyList");
+		System.out.println("Inside  searchCompony comName = " + data);
+		
+		List<String> cList = service.searchCompony(data);
+		System.out.println(cList);
+		mav.addObject("cList", cList);
+		return mav;
+	}
+
+	@GetMapping("/componyStock")
+	public ModelAndView getComponyStock(String comName) {
+
+		ModelAndView mav = new ModelAndView("ComponyData");
+		System.out.println("Inside  getComponyStock comName = " + comName);
+		Compony compony = service.getComponyStock(comName);
+
+		List<Compony> cList = new ArrayList<Compony>();
+		cList.add(compony);
+		System.out.println(compony);
+		mav.setViewName("ComponyData");
+		mav.addObject("compony", cList);
+		return mav;
+	}
+
+}

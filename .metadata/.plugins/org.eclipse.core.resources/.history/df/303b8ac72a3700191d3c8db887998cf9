@@ -1,0 +1,7 @@
+package com.hw.stock.dao.impl;
+
+import com.hw.stock.dao.StockDao;
+
+public class StockDaoImpl implements StockDao {
+
+}

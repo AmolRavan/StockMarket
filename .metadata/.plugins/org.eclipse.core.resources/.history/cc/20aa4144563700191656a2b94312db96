@@ -1,0 +1,7 @@
+package com.hw.stock.model;
+
+public class ComponyHistory {
+
+	float yday;
+
+}

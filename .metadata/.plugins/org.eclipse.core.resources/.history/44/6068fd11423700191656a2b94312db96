@@ -1,0 +1,37 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<c:set var="compony" value="${compony}" />
+	<%-- <c:if test="${compony not empty}"> --%>
+	<c:forEach items="${compony}" var="com" varStatus="status">
+		<table>
+			<tr>
+				<th>Compony Name</th>
+				<th>Current rate</th>
+				<th>High Date</th>
+				<th>High Rate</th>
+				<th>Low Date</th>
+				<th>Low Rate</th>
+			</tr>
+			<tr>
+				<td>${com.name}</td>
+				<td>${com.CurrentRate}</td>
+				<td>${com.highDate}</td>
+				<td>${com.highRate}</td>
+				<td>${com.lowDate}</td>
+				<td>${com.lowRate}</td>
+			</tr>
+		</table>
+	</c:forEach>
+	<%-- 	</c:if> --%>
+</body>
+</html>

@@ -1,0 +1,44 @@
+package com.hw.stock.service.impl;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hw.stock.dao.impl.StockDaoImpl;
+import com.hw.stock.model.Compony;
+import com.hw.stock.service.StockService;
+
+@Service
+public class StockServiceImpl implements StockService {
+
+	@Autowired
+	StockDaoImpl dao;
+
+	public List<String> searchCompony(String comName) {
+		List<String> cList = dao.searchCompony(comName);
+
+		return cList;
+
+	}
+
+	public Compony getComponyStock(String comName) {
+		Compony compony = dao.getComponyStock(comName);
+
+		return compony;
+	}
+
+	public List<Compony> getProfitStockInfo() {
+		// TODO Auto-generated method stub
+		return dao.getProfitStockInfo();
+	}
+
+	public List<Compony> getLossStockInfo() {
+		// TODO Auto-generated method stub
+		return dao.getProfitStockInfo();
+		;
+	}
+
+}

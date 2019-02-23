@@ -1,0 +1,20 @@
+package com.hw.stock.dao.impl;
+
+
+@Repository
+import java.util.ArrayList;
+import java.ut
+
+import org.springframework.stereotype.Repository;il.List;
+
+import com.hw.stock.dao.StockDao;
+
+public class StockDaoImpl implements StockDao {
+
+	public List<String> searchCompony(String comName) {
+		List<String> cList = new ArrayList<String>();
+
+		return cList;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.hw.stock.dao;
+
+public class StockDao {
+
+}

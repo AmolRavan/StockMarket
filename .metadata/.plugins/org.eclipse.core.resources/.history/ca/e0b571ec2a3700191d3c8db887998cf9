@@ -1,0 +1,14 @@
+package com.hw.stock.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public interface StockService {
+
+	List<String> searchCompony(String comName);
+	
+	
+
+}
